@@ -1,4 +1,4 @@
-streamlit
-earthengine-api
+streamlit==1.45.1
+earthengine-api==0.1.385
 geemap
 google-auth
