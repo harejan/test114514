@@ -18,7 +18,7 @@ ee.Initialize(credentials)
 
 ###############################################
 st.set_page_config(layout="wide")
-st.title("🌍👁️👁️ 使用服務帳戶連接 GEE 的 Streamlit App")
+st.title("🌍 使用服務帳戶連接 GEE 的 Streamlit App")
 
 
 # 地理區域
@@ -35,4 +35,4 @@ ndvi = image.normalizedDifference(["SR_B5", "SR_B4"]).rename("NDVI")
 # 顯示地圖
 Map = geemap.Map(center=[25.03, 121.56], zoom=10)
 Map.addLayer(ndvi, {"min": 0, "max": 1, "palette": ["white", "green"]}, "NDVI")
-Map.to_streamlit(height=300)
+Map.to_streamlit(height=600)
